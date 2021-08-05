@@ -14,12 +14,12 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSMutableDictionary *quotes;
+@property (strong, nonatomic) NSMutableArray<ModelAPIData *> *quotes;
 
-@property (strong, nonatomic) NSMutableArray *quoteS;
-@property (strong, nonatomic) NSMutableArray *authorS;
-@property (strong, nonatomic) NSString *qt;
-@property (strong, nonatomic) NSString *at;
+@property (strong, nonatomic) NSMutableArray *quoteData;
+//@property (strong, nonatomic) NSMutableArray *authorS;
+//@property (strong, nonatomic) NSString *qt;
+//@property (strong, nonatomic) NSString *at;
 
 
 
@@ -27,17 +27,15 @@
 
 @implementation ViewController
 
-ModelAPIData *quotesData;
-
+int n = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    quotesData = [[ModelAPIData alloc] init];
-    quotesData.author = @"";
-    quotesData.quote = @"";
-    self.quoteS = [[NSMutableArray alloc] init];
-    self.authorS = [[NSMutableArray alloc] init];
+     
+//    quotes.author = @"";
+//    quotes.quote = @"";
+    self.quotes = [[NSMutableArray alloc] init];
 
 
     
@@ -49,16 +47,17 @@ ModelAPIData *quotesData;
     // Parse JSON
     NSDictionary *jsonResult = [NSJSONSerialization JSONObjectWithData:JSONData options:kNilOptions error:nil];
     
-    self.quotes = [[jsonResult valueForKey:@"quotes"] mutableCopy];
+    self.quoteData = [[jsonResult valueForKey:@"quotes"] mutableCopy];
     
-    for (id item in self.quotes)
+    for (id item in self.quoteData)
     {
-        quotesData.author = [item objectForKey:@"author"];
-        [self.authorS addObject:quotesData.author];
-        quotesData.quote = [item objectForKey:@"text"];
-        [self.quoteS addObject:quotesData.quote];
+        ModelAPIData *quote = [[ModelAPIData alloc] init];
+        quote.quote = [item objectForKey:@"text"];
+        quote.author = [item objectForKey:@"author"];
+        [self.quotes addObject:quote];
     }
-    
+     
+//    NSLog(@"%@", [_quotes]);
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -72,16 +71,17 @@ ModelAPIData *quotesData;
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.quoteS.count;
+    return self.quotes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reUseIdentifier" forIndexPath:indexPath];
 
-    cell.quotesLabel.text = [self.quoteS objectAtIndex:indexPath.row];
-  
-    cell.authorLabel.text = [NSString stringWithFormat:@"%@ %@", @"~", [self.authorS objectAtIndex:indexPath.row]];
+    cell.quotesLabel.text = self.quotes[n].quote;
+    cell.authorLabel.text = [NSString stringWithFormat:@"%@ %@", @"~", self.quotes[n].author];
+    
+    n = n+1;
     
     return cell;
 }
