@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2C262B26BAB64900B49948 /* ModelAPIData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2C262A26BAB64900B49948 /* ModelAPIData.m */; };
 		2DDB533E26B958050026D1F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB533D26B958050026D1F4 /* AppDelegate.m */; };
 		2DDB534126B958050026D1F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB534026B958050026D1F4 /* SceneDelegate.m */; };
 		2DDB534426B958050026D1F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB534326B958050026D1F4 /* ViewController.m */; };
@@ -14,9 +15,13 @@
 		2DDB534926B958060026D1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB534826B958060026D1F4 /* Assets.xcassets */; };
 		2DDB534C26B958060026D1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB534A26B958060026D1F4 /* LaunchScreen.storyboard */; };
 		2DDB534F26B958060026D1F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB534E26B958060026D1F4 /* main.m */; };
+		2DDB535826B9665E0026D1F4 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB535626B9665E0026D1F4 /* CustomTableViewCell.m */; };
+		2DDB535926B9665E0026D1F4 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB535726B9665E0026D1F4 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2C262926BAB64900B49948 /* ModelAPIData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelAPIData.h; sourceTree = "<group>"; };
+		2D2C262A26BAB64900B49948 /* ModelAPIData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelAPIData.m; sourceTree = "<group>"; };
 		2DDB533926B958050026D1F4 /* FamousQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamousQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDB533C26B958050026D1F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DDB533D26B958050026D1F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +34,9 @@
 		2DDB534B26B958060026D1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DDB534D26B958060026D1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DDB534E26B958060026D1F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DDB535526B9665E0026D1F4 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		2DDB535626B9665E0026D1F4 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		2DDB535726B9665E0026D1F4 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,11 @@
 				2DDB534A26B958060026D1F4 /* LaunchScreen.storyboard */,
 				2DDB534D26B958060026D1F4 /* Info.plist */,
 				2DDB534E26B958060026D1F4 /* main.m */,
+				2DDB535526B9665E0026D1F4 /* CustomTableViewCell.h */,
+				2DDB535626B9665E0026D1F4 /* CustomTableViewCell.m */,
+				2DDB535726B9665E0026D1F4 /* CustomTableViewCell.xib */,
+				2D2C262926BAB64900B49948 /* ModelAPIData.h */,
+				2D2C262A26BAB64900B49948 /* ModelAPIData.m */,
 			);
 			path = FamousQuotes;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 			files = (
 				2DDB534C26B958060026D1F4 /* LaunchScreen.storyboard in Resources */,
 				2DDB534926B958060026D1F4 /* Assets.xcassets in Resources */,
+				2DDB535926B9665E0026D1F4 /* CustomTableViewCell.xib in Resources */,
 				2DDB534726B958050026D1F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DDB534426B958050026D1F4 /* ViewController.m in Sources */,
+				2D2C262B26BAB64900B49948 /* ModelAPIData.m in Sources */,
 				2DDB533E26B958050026D1F4 /* AppDelegate.m in Sources */,
 				2DDB534F26B958060026D1F4 /* main.m in Sources */,
+				2DDB535826B9665E0026D1F4 /* CustomTableViewCell.m in Sources */,
 				2DDB534126B958050026D1F4 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
