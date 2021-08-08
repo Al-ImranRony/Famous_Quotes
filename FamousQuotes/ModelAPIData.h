@@ -2,19 +2,18 @@
 //  ModelAPIData.h
 //  FamousQuotes
 //
-//  Created by Bitmorpher 4 on 8/4/21.
+//  Created by Bitmorpher 4 on 8/8/21.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Mantle/Mantle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ModelAPIData : NSObject
+@interface ModelAPIData : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong) NSString *quote;
-@property (nonatomic, strong) NSString *author;
-
--(id)initWithQuote:(NSString *)quote withAuthor:(NSString *)author;
+@property (nonatomic, copy, readwrite) NSString *quote;
+@property (nonatomic, copy, readwrite) NSString *author;
 
 @end
 
