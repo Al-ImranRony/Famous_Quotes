@@ -54,19 +54,8 @@ int n = 0;
     ModelAPIQuotesRoot *quotesList = [MTLJSONAdapter modelOfClass:[ModelAPIQuotesRoot class] fromJSONDictionary:jsonResult error:&error];
     
     
-//    NSLog(@"--%@", quotesList);
+    NSLog(@"--%@", quotesList);
 
-
-    
-    for (id item in quotesList.quotes)
-    {
-        ModelAPIData *quote = [[ModelAPIData alloc] init];
-        quote.quote = [item objectAtIndex:@"quote"];
-        quote.author = [item objectForKey:@"author"];
-        [self.quotes addObject:quote];
-    }
-     
-//    NSLog(@"%@", [_quotes]);
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
