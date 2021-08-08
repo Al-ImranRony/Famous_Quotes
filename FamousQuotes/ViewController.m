@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "CustomTableViewCell.h"
 #import "ModelAPIData.h"
+#import "ModelAPIQuotesRoot.h"
 
 
 #define JSON_FILE_URL @"https://goquotes-api.herokuapp.com/api/v1/random?count=20"
@@ -44,15 +45,23 @@ int n = 0;
     // Download JSON
     NSData *JSONData = [NSData dataWithContentsOfURL:[NSURL URLWithString:JSON_FILE_URL]];
     
-    // Parse JSON
+    
+    // Parse JSON into dictionary
     NSDictionary *jsonResult = [NSJSONSerialization JSONObjectWithData:JSONData options:kNilOptions error:nil];
     
-    self.quoteData = [[jsonResult valueForKey:@"quotes"] mutableCopy];
+    //convert JSON to our Model
+    NSError *error = nil;
+    ModelAPIQuotesRoot *quotesList = [MTLJSONAdapter modelOfClass:[ModelAPIQuotesRoot class] fromJSONDictionary:jsonResult error:&error];
     
-    for (id item in self.quoteData)
+    
+//    NSLog(@"--%@", quotesList);
+
+
+    
+    for (id item in quotesList.quotes)
     {
         ModelAPIData *quote = [[ModelAPIData alloc] init];
-        quote.quote = [item objectForKey:@"text"];
+        quote.quote = [item objectAtIndex:@"quote"];
         quote.author = [item objectForKey:@"author"];
         [self.quotes addObject:quote];
     }

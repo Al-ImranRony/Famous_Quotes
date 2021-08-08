@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D5F891D26BFA5F000E5DDA0 /* ModelAPIData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F891C26BFA5F000E5DDA0 /* ModelAPIData.m */; };
+		2D5F892026BFDF6000E5DDA0 /* ModelAPIQuotesRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F891F26BFDF6000E5DDA0 /* ModelAPIQuotesRoot.m */; };
 		2DDB533E26B958050026D1F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB533D26B958050026D1F4 /* AppDelegate.m */; };
 		2DDB534126B958050026D1F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB534026B958050026D1F4 /* SceneDelegate.m */; };
 		2DDB534426B958050026D1F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB534326B958050026D1F4 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2D5F891B26BFA5F000E5DDA0 /* ModelAPIData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelAPIData.h; sourceTree = "<group>"; };
 		2D5F891C26BFA5F000E5DDA0 /* ModelAPIData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelAPIData.m; sourceTree = "<group>"; };
+		2D5F891E26BFDF6000E5DDA0 /* ModelAPIQuotesRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelAPIQuotesRoot.h; sourceTree = "<group>"; };
+		2D5F891F26BFDF6000E5DDA0 /* ModelAPIQuotesRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelAPIQuotesRoot.m; sourceTree = "<group>"; };
 		2DDB533926B958050026D1F4 /* FamousQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamousQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDB533C26B958050026D1F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DDB533D26B958050026D1F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				2DDB535726B9665E0026D1F4 /* CustomTableViewCell.xib */,
 				2D5F891B26BFA5F000E5DDA0 /* ModelAPIData.h */,
 				2D5F891C26BFA5F000E5DDA0 /* ModelAPIData.m */,
+				2D5F891E26BFDF6000E5DDA0 /* ModelAPIQuotesRoot.h */,
+				2D5F891F26BFDF6000E5DDA0 /* ModelAPIQuotesRoot.m */,
 			);
 			path = FamousQuotes;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				2DDB534F26B958060026D1F4 /* main.m in Sources */,
 				2DDB535826B9665E0026D1F4 /* CustomTableViewCell.m in Sources */,
 				2DDB534126B958050026D1F4 /* SceneDelegate.m in Sources */,
+				2D5F892026BFDF6000E5DDA0 /* ModelAPIQuotesRoot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
