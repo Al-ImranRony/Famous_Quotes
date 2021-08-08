@@ -12,11 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModelAPIQuotesRoot : MTLModel <MTLJSONSerializing>
 
-//@property (nonatomic, readwrite) NSString *status;
-//@property (nonatomic, readwrite) NSString *message;
-//@property (nonatomic, readwrite) NSString *count;
 @property (copy, nonatomic) NSMutableArray<ModelAPIData *> *quotes;
-
 
 @end
 

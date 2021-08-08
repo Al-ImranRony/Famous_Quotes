@@ -18,9 +18,8 @@
 @property (strong, nonatomic) NSMutableArray<ModelAPIData *> *quotes;
 
 @property (strong, nonatomic) NSMutableArray *quoteData;
-//@property (strong, nonatomic) NSMutableArray *authorS;
-//@property (strong, nonatomic) NSString *qt;
-//@property (strong, nonatomic) NSString *at;
+
+@property (strong, nonatomic) NSString *title;
 
 
 
@@ -33,15 +32,9 @@ int n = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     
-//    quotes.author = @"";
-//    quotes.quote = @"";
     self.quotes = [[NSMutableArray alloc] init];
 
 
-    
-    self.title = @"Famous Quotes";
-     
     // Download JSON
     NSData *JSONData = [NSData dataWithContentsOfURL:[NSURL URLWithString:JSON_FILE_URL]];
     
@@ -53,8 +46,7 @@ int n = 0;
     NSError *error = nil;
     ModelAPIQuotesRoot *quotesList = [MTLJSONAdapter modelOfClass:[ModelAPIQuotesRoot class] fromJSONDictionary:jsonResult error:&error];
     
-    
-    NSLog(@"--%@", quotesList);
+    self.quotes = quotesList.quotes;
 
     
     self.tableView.dataSource = self;
