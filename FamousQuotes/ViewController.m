@@ -78,6 +78,7 @@ int n = 0;
     
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reUseIdentifier" forIndexPath:indexPath];
 
+//    ModelAPIData *quote = [[ModelAPIData alloc] init];
     cell.quotesLabel.text = self.quotes[n].quote;
     cell.authorLabel.text = [NSString stringWithFormat:@"%@ %@", @"~", self.quotes[n].author];
     
